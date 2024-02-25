@@ -1,0 +1,15 @@
+apiVersion: eksctl.io/v1alpha5
+kind: ClusterConfig
+
+metadata:
+  name: c14-cluster
+  region: us-east-2 # Replace with your desired AWS region
+  version: '1.27'
+
+managedNodeGroups:
+  - name: worker-node-1-27
+    instanceType: m5.large # Replace with your desired instance type
+    desiredCapacity: 2 # The initial number of worker nodes
+    minSize: 1 # Minimum number of nodes
+    maxSize: 3 # Maximum number of nodes
+
